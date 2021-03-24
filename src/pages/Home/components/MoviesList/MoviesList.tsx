@@ -4,12 +4,13 @@ import Movie from '../Movie/Movie';
 
 type Props = {
     movies: SearchMovie[] | undefined
+    moviesPerRow: number
 }
 
-const MoviesList = ( { movies }: Props ) => {
+const MoviesList = ( { movies, moviesPerRow }: Props ) => {
     return (
         <>
-            <div className="movies-list flex flex-row flex-wrap justify-evenly">
+            <div className={`movies-list grid grid-cols-${moviesPerRow} gap-4`}>
                 {
                     movies?.map(movie => {
                         return (

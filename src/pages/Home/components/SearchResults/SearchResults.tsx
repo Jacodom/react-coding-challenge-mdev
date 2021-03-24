@@ -10,7 +10,9 @@ const SearchResults = () => {
     const { data: movies, isLoading, error, refetch } = useSearchMovies({ query: searchContext.searchText })
 
     useEffect(() => {
-        refetch()
+        if (searchContext.searchText.length > 0) {
+            refetch()
+        }
     }, [searchContext.searchText, refetch])
 
     return (
@@ -18,7 +20,8 @@ const SearchResults = () => {
             {
                 error ? <p> { error.message } </p> :
                 isLoading ? <p>Loading... </p> :
-                movies && movies?.length > 0 ? <MoviesList movies={ movies } /> :
+                movies && movies?.length > 0 ? 
+                <MoviesList movies={ movies } moviesPerRow={ 6 }/> :
                 <p className="text-3xl my-20"> No movies found with that search and filter criteria </p>
             }
         </>
