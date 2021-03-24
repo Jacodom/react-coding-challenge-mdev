@@ -1,10 +1,9 @@
 import React from 'react';
+import AppRouter from './routers/AppRouter';
 
 const App = () => {
   return (
-    <>
-      <h1>movies</h1>
-    </>
+    <AppRouter />
   );
 }
 
