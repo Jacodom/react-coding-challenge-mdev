@@ -12,7 +12,7 @@
 
     `npm run start`
 
-4) Go to your prefered web browser and Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4) Go to your preferred web browser and Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 If you want to build the app for production:
