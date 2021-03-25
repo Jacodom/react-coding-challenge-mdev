@@ -17,6 +17,7 @@ const Movie = ( { movie }: Props ) => {
                     <div className="movie__content__info text-center mt-4">
                         <p className="movie__content__title font-bold"> { movie?.title } </p>
                         <p className="movie__content__year font-normal italic"> { movie ? new Date(movie.release_date).getFullYear() : null } </p>
+                        <p className="movie__content__year font-normal italic"> Rating: { movie?.vote_average } </p>
                     </div>
                 </div>
             </Link>
